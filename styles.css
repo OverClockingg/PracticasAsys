@@ -7,5 +7,6 @@
 .container{
 
     background-image: url("/imagenes/fondoo.png");
+    background-attachment: fixed;
     
 }
