@@ -6,7 +6,7 @@
 
 .container{
 
-    background-image: url("/imagenes/fondoo.png");
+    background-image: url("fondoo.png");
     background-attachment: fixed;
 
 }
