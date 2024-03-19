@@ -4,11 +4,15 @@
 
 
 
-.container{
+body{
 
     background-image: url("https://overclockingg.github.io/pruebas/fondoo.png");
     background-attachment: fixed;
-
+    background-repeat:no-repeat;
+    margin:0;
+    padding:0;
+    min-height:100vh;
+    max-width:max-content;
 }
 ul, ol {
     list-style:none;
@@ -16,24 +20,30 @@ ul, ol {
 
 .nav > li {
     float:left;
+    padding:0px;
 }
 
 .nav li a {
     background-color:#000;
     color:#fff;
     text-decoration:none;
-    padding:10px 12px;
+    padding:0px 10px;
     display:block;
+    
+    position:relative;
+    left:800px;
+    
 }
 
 .nav li a:hover {
     background-color:#434343;
+    
 }
 
 .nav li ul {
     display:none;
-    position:absolute;
-    min-width:140px;
+    position:absolut;
+    min-width:0px;
 }
 
 .nav li:hover > ul {
@@ -45,6 +55,6 @@ ul, ol {
 }
 
 .nav li ul li ul {
-    right:-140px;
+    right:0px;
     top:0px;
 }
