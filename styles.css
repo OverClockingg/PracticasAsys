@@ -74,11 +74,14 @@ ul, ol {
 
 @media (max-width: 1000px) {
   .container{
-position: absolute;
+position:fixed;
   }
 }
-
-
+@media (max-width: 1000px) {
+    .nav li ul {
+  position:fixed;
+    }
+  }
 
 
 
