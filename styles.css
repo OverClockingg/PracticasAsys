@@ -20,7 +20,7 @@ body{
 
 
 body.PR9{
-    background-image: url("https://overclockingg.github.io/PracticasAsys/vortex.png");
+    background-image: url("https://overclockingg.github.io/PracticasAsys/hole.png");
     background-attachment: fixed;
     background-repeat:no-repeat;
    background-size:cover;
@@ -28,6 +28,7 @@ body.PR9{
     padding:0;
     min-height:100vh;
     max-width:max-content;
+    
 }
 
 ul, ol {
