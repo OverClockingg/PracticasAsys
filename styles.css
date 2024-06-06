@@ -30,15 +30,16 @@ html{
 }
 
 body.PR9{
+    background-color: #000;
     background-image: url("https://overclockingg.github.io/PracticasAsys/ima4.jpg");
     background-attachment: scroll;
     background-repeat:no-repeat;
-   background-size:cover;
+   background-size:100%;
     margin:0;
     padding:0;
     min-height:1000px;
     max-width:1000px;
-    
+  
 }
 
 ul, ol {
