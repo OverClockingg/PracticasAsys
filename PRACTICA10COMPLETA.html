@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,IE=9,chrome=1"><meta name="generator" content="MATLAB 2024a"><title>P10: Respuesta en frecuencia, simulación en MATLAB</title><style type="text/css">.rtcContent { padding: 30px; } .S0 { margin: 3px 10px 5px 4px; padding: 0px; line-height: 28.8px; min-height: 0px; white-space: pre-wrap; color: rgb(192, 76, 11); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 24px; font-weight: 400; text-align: center;  }
+.S1 { margin-bottom: 20px; padding-bottom: 4px;  }
+.S2 { margin: 0px; padding: 10px 0px 10px 5px; line-height: 21px; min-height: 0px; white-space: pre-wrap; color: rgb(33, 33, 33); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 14px; font-weight: 700; text-align: start;  }
+.S3 { margin: -1px 0px 0px; padding: 10px 0px 10px 7px; line-height: 21px; min-height: 0px; white-space: pre-wrap; color: rgb(33, 33, 33); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 14px; font-weight: 400; text-align: start;  }
+.S4 { margin: 20px 10px 5px 4px; padding: 0px; line-height: 20px; min-height: 0px; white-space: pre-wrap; color: rgb(33, 33, 33); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 20px; font-weight: 700; text-align: center;  }
+.S5 { margin: 2px 10px 9px 4px; padding: 0px; line-height: 21px; min-height: 0px; white-space: pre-wrap; color: rgb(33, 33, 33); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 14px; font-weight: 400; text-align: center;  }
+.S6 { margin: 2px 10px 9px 4px; padding: 0px; line-height: 21px; min-height: 0px; white-space: pre-wrap; color: rgb(33, 33, 33); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 14px; font-weight: 400; text-align: left;  }
+.S7 { margin: 10px 0px 20px; padding-left: 0px; font-family: Helvetica, Arial, sans-serif; font-size: 14px;  }
+.S8 { margin-left: 56px; line-height: 21px; min-height: 0px; text-align: left; white-space: pre-wrap;  }
+.S9 { margin: 15px 10px 5px 4px; padding: 0px; line-height: 28.8px; min-height: 0px; white-space: pre-wrap; color: rgb(192, 76, 11); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 24px; font-weight: 400; text-align: left;  }
+.S10 { margin: 15px 10px 5px 4px; padding: 0px; line-height: 28.8px; min-height: 0px; white-space: pre-wrap; color: rgb(192, 76, 11); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 24px; font-weight: 400; text-align: center;  }</style></head><body><div class = rtcContent><h1  class = 'S0' id = 'T_03C8B4FC' ><span style=' font-weight: bold;'>P10: Respuesta en frecuencia, simulación en MATLAB</span></h1><div  class = 'S1'><div  class = 'S2'><span style=' font-weight: bold;'>Table of Contents</span></div><div  class = 'S3'><a href = "#T_03C8B4FC"><span>P10: Respuesta en frecuencia, simulación en MATLAB
+</span></a><span>    </span><a href = "#H_C65EFB83"><span>Dependence of Frequency Response on Poles and Zeros of H(s)
+</span></a><span>    </span><a href = "#H_2652E693"><span>Lowpass Filters 
+</span></a><span>    </span><a href = "#H_317D867F"><span>Bandpass Filters
+</span></a><span>    </span><a href = "#H_59E989DF"><span>Notch (Bandstop) Filters
+</span></a><a href = "#T_2067ED6C"><span>Objetivos
+</span></a><a href = "#T_8DB43F80"><span>Entregables
+</span></a><span>    </span><a href = "#H_3386E4A7"><span>PROBLEMA 1
+</span></a><span>    </span><a href = "#H_82096872"><span>PROBLEMA 2
+</span></a><span>    </span><a href = "#H_3FB1B164"><span>PROBLEMA 3
+</span></a><span>    </span><a href = "#H_0CC3B326"><span>PROBLEMA 4
+</span></a><span>    </span><a href = "#H_59C0EB50"><span>PROBLEMA 5
+</span></a><span>    </span><a href = "#H_BA4D4F21"><span>PROBLEMA 6
+</span></a><span>    </span><a href = "#H_AD66D737"><span>PROBLEMA 7</span></a></div></div><h2  class = 'S4' id = 'H_C65EFB83' ><span>Dependence of Frequency Response on Poles and Zeros of H(s)</span></h2><div  class = 'S5'><span></span></div><div  class = 'S6'><span>El tema de la Dependencia de la Respuesta en Frecuencia en los Polos y Ceros de H</span><span>(</span><span>s</span><span>)</span><span>H(s)</span><span>H</span><span>(</span><span>s</span><span>)</span><span> es fundamental en el análisis de sistemas lineales en el dominio de la frecuencia. Aquí se explora cómo la ubicación de los polos y ceros de una función de transferencia </span><span>H</span><span>(</span><span>s</span><span>)</span><span>H(s)</span><span>H</span><span>(</span><span>s</span><span>)</span><span> afecta directamente la forma y las características de su respuesta en frecuencia.</span></div><div  class = 'S6'><span></span></div><div  class = 'S6'><span style=' font-weight: bold;'>Polos y Ceros</span></div><div  class = 'S6'><span>Los polos y ceros de una función de transferencia son puntos en el plano complejo que determinan su comportamiento dinámico. Los ceros son las raíces del numerador de </span><span>H</span><span>(</span><span>s</span><span>),  mientras que los polos son las raíces del denominador.</span></div><div  class = 'S6'><span style=' font-weight: bold;'>Respuesta en Frecuencia</span></div><div  class = 'S6'><span>La respuesta en frecuencia de </span><span>H</span><span>(</span><span>s</span><span>) describe cómo el sistema responde a diferentes frecuencias de entrada. Se analiza utilizando la transformada de Laplace y evaluando </span><span>H</span><span>(</span><span>j</span><span>ω</span><span>), donde </span><span>ω es la frecuencia angular.</span></div><div  class = 'S6'><span style=' font-weight: bold;'>Frecuencia Angular</span></div><div  class = 'S6'><span>La frecuencia angular </span><span>ω está relacionada con la frecuencia </span><span>f por </span><span>ω</span><span>=2</span><span>π</span><span>f</span><span>. La respuesta en frecuencia proporciona información sobre cómo el sistema atenúa o amplifica señales de diferentes frecuencias.</span></div><div  class = 'S6'><span style=' font-weight: bold;'>Impacto de los Polos</span></div><div  class = 'S6'><span>Los polos de </span><span>H</span><span>(</span><span>s</span><span>) determinan las frecuencias donde la amplitud y la fase de la respuesta en frecuencia pueden cambiar significativamente. </span></div><div  class = 'S6'><span style=' font-weight: bold;'>Impacto de los Ceros</span></div><div  class = 'S6'><span>Los ceros de </span><span>H</span><span>(</span><span>s</span><span>), ubicados en </span><span>s</span><span>=</span><span>−</span><span>σ</span><span>+</span><span>j</span><span>ω</span><span>0</span><span>​</span><span>, influyen en cómo </span><span>H</span><span>(</span><span>s)</span><span> atenúa o amplifica ciertas frecuencias. Pueden anular las componentes de frecuencia correspondientes.</span></div><div  class = 'S6'><span style=' font-weight: bold;'>Diagrama de Bode</span></div><div  class = 'S6'><span>El diagrama de Bode es una herramienta gráfica para visualizar la respuesta en frecuencia de un sistema, mostrando cómo varía la magnitud y la fase de </span><span>H</span><span>(</span><span>j</span><span>ω</span><span>) con respecto a </span><span>ω</span><span>.</span></div><div  class = 'S6'><span style=' font-weight: bold;'>Estabilidad y Resonancia</span></div><div  class = 'S6'><span>La ubicación de los polos en el plano complejo no solo afecta la respuesta en frecuencia, sino también la estabilidad del sistema y la posibilidad de fenómenos de resonancia.</span></div><div  class = 'S6'><span style=' font-weight: bold;'>Diseño de Sistemas</span></div><div  class = 'S6'><span>El conocimiento de cómo los polos y ceros afectan la respuesta en frecuencia es crucial para el diseño de sistemas que cumplan con requisitos específicos de rendimiento en el dominio de la frecuencia.</span></div><div  class = 'S6'><span>En resumen, la Dependencia de la Respuesta en Frecuencia en los Polos y Ceros de </span><span>H</span><span>(</span><span>s</span><span>)</span><span>H(s)</span><span>H</span><span>(</span><span>s</span><span>)</span><span> es esencial para comprender y diseñar sistemas lineales, ya que permite prever y ajustar cómo el sistema reaccionará a diferentes frecuencias de entrada según la disposición de sus componentes fundamentales en el dominio de Laplace.</span></div><h2  class = 'S4' id = 'H_2652E693' ><span>Lowpass Filters </span></h2><div  class = 'S6'><span>Un filtro paso bajo (Lowpass Filter en inglés) es un dispositivo o circuito diseñado para permitir el paso de señales con frecuencias bajas y atenuar o bloquear las señales con frecuencias altas. Este tipo de filtro es fundamental en el procesamiento de señales y en numerosas aplicaciones de ingeniería y telecomunicaciones. Aquí se detalla exhaustivamente su funcionamiento y aplicaciones:</span></div><div  class = 'S6'><span style=' font-weight: bold;'>Funcionamiento:</span></div><ul  class = 'S7'><li  class = 'S8'><span>Un filtro paso bajo se caracteriza por tener una frecuencia de corte, </span><span>f</span><span>c</span><span>f_c</span><span>f</span><span>c</span><span>​</span><span>, que separa la región donde las frecuencias son atenuadas de aquellas que son pasadas sin atenuación significativa.</span></li><li  class = 'S8'><span>Normalmente, se implementa mediante componentes electrónicos como resistencias, condensadores, inductores o dispositivos activos como amplificadores operacionales.</span></li><li  class = 'S8'><span>En el dominio de la frecuencia, un filtro paso bajo ideal tendría una respuesta de ganancia unitaria para frecuencias por debajo de </span><span>f</span><span>c</span><span>f_c</span><span>f</span><span>c</span><span>​</span><span> y una ganancia cero para frecuencias por encima de </span><span>f</span><span>c</span><span>f_c</span><span>f</span><span>c</span><span>​</span><span>.</span></li></ul><div  class = 'S6'><span style=' font-weight: bold;'>Tipos de Filtros Paso Bajo:</span></div><ul  class = 'S7'><li  class = 'S8'><span style=' font-weight: bold;'>Filtros Pasivos:</span><span> Utilizan solo componentes pasivos como resistencias, condensadores e inductores.</span></li><li  class = 'S8'><span style=' font-weight: bold;'>Filtros Activos:</span><span> Emplean componentes activos como amplificadores operacionales para lograr una mayor selectividad y control de la respuesta en frecuencia.</span></li><li  class = 'S8'><span style=' font-weight: bold;'>Filtros Digitales:</span><span> Implementados en sistemas digitales mediante algoritmos de procesamiento de señales, como los filtros FIR y IIR.</span></li></ul><div  class = 'S6'><span style=' font-weight: bold;'>Características:</span></div><ul  class = 'S7'><li  class = 'S8'><span style=' font-weight: bold;'>Frecuencia de Corte (</span><span>f</span><span>c</span><span>f_c</span><span style=' font-weight: bold;'>f</span><span style=' font-weight: bold;'>c</span><span style=' font-weight: bold;'>​</span><span style=' font-weight: bold;'>):</span><span> Es la frecuencia a partir de la cual el filtro comienza a atenuar las señales.</span></li><li  class = 'S8'><span style=' font-weight: bold;'>Ancho de Banda:</span><span> La diferencia entre la frecuencia de corte y la frecuencia de corte inferior (en caso de un filtro paso bajo de tipo ideal).</span></li><li  class = 'S8'><span style=' font-weight: bold;'>Atenuación:</span><span> Es la reducción en la amplitud de las señales que se produce a medida que aumenta la frecuencia y se acerca a la frecuencia de corte.</span></li></ul><h2  class = 'S4' id = 'H_317D867F' ><span>Bandpass Filters</span></h2><div  class = 'S5'><span></span></div><div  class = 'S6'><span>Un filtro pasa banda (Bandpass Filter en inglés) es un dispositivo o circuito diseñado para permitir el paso de señales dentro de un rango específico de frecuencias y atenuar o bloquear las señales fuera de ese rango. Este tipo de filtro es fundamental en aplicaciones donde se necesita seleccionar y procesar señales dentro de una banda de frecuencia definida. A continuación, se detalla de manera detallada su funcionamiento, tipos, características, aplicaciones y consideraciones de diseño:</span></div><div  class = 'S6'><span style=' font-weight: bold;'>Funcionamiento:</span></div><ul  class = 'S7'><li  class = 'S8'><span>Un filtro pasa banda tiene dos frecuencias de corte: una frecuencia de corte inferior ​</span><span> y una frecuencia de corte superior​</span><span>.</span></li><li  class = 'S8'><span>Dentro de este rango de frecuencias </span><span>​</span><span>, el filtro tiene una ganancia significativa, permitiendo que las señales pasen con mínima atenuación.</span></li><li  class = 'S8'><span>Las señales fuera de este rango de frecuencias son atenuadas considerablemente.</span></li></ul><div  class = 'S6'><span style=' font-weight: bold;'>Tipos de Filtros Pasa Banda:</span></div><ul  class = 'S7'><li  class = 'S8'><span style=' font-weight: bold;'>Filtros Pasivos:</span><span> Utilizan componentes pasivos como inductores y condensadores para construir circuitos LC.</span></li><li  class = 'S8'><span style=' font-weight: bold;'>Filtros Activos:</span><span> Utilizan amplificadores operacionales u otros dispositivos activos para mejorar la selectividad y ajustabilidad.</span></li><li  class = 'S8'><span style=' font-weight: bold;'>Filtros Digitales:</span><span> Implementados en sistemas digitales mediante algoritmos de procesamiento de señales.</span></li></ul><div  class = 'S6'><span style=' font-weight: bold;'>Características:</span></div><ul  class = 'S7'><li  class = 'S8'><span style=' font-weight: bold;'>Ancho de Banda (BW):</span><span> Es la diferencia entre  Fc2 y Fc1​</span><span>, que define la banda de frecuencia donde el filtro pasa banda es efectivo.</span></li><li  class = 'S8'><span style=' font-weight: bold;'>Frecuencia Central (</span><span>f</span><span>0</span><span>f_0</span><span style=' font-weight: bold;'>f</span><span style=' font-weight: bold;'>0</span><span style=' font-weight: bold;'>​</span><span style=' font-weight: bold;'>):</span><span> Es el punto medio entre Fc2 y Fc12</span><span>​</span><span>, donde la ganancia del filtro pasa banda alcanza su máximo.</span></li><li  class = 'S8'><span style=' font-weight: bold;'>Selectividad:</span><span> Indica cuán bien el filtro puede discriminar las frecuencias dentro de su banda de paso frente a las frecuencias fuera de esta banda.</span></li></ul><h2  class = 'S4' id = 'H_59E989DF' ><span>Notch (Bandstop) Filters</span></h2><div  class = 'S5'><span></span></div><div  class = 'S6'><span>Un filtro notch, también conocido como filtro bandstop en inglés, es un dispositivo o circuito diseñado para atenuar o bloquear selectivamente una banda estrecha de frecuencias alrededor de una frecuencia central específica, mientras permite el paso de todas las demás frecuencias. Este tipo de filtro es utilizado principalmente para suprimir o eliminar frecuencias no deseadas en aplicaciones donde es crucial mantener el resto del espectro de frecuencias intacto. A continuación, se detalla de manera detallada su funcionamiento, tipos, características, aplicaciones y consideraciones de diseño:</span></div><div  class = 'S6'><span style=' font-weight: bold;'>Funcionamiento:</span></div><ul  class = 'S7'><li  class = 'S8'><span>Un filtro notch tiene una frecuencia central </span><span>f</span><span>0</span><span>f alrededor de la cual atenúa las señales. Esta frecuencia central es aquella que se desea suprimir o atenuar.</span></li><li  class = 'S8'><span>Generalmente, el filtro notch se caracteriza por tener dos frecuencias de corte </span><span>f</span><span>c</span><span>1 y </span><span>f</span><span>c</span><span>2​</span><span>, que definen la banda de frecuencias que serán atenuadas alrededor de </span><span>f</span><span>0</span><span>f​</span><span>.</span></li><li  class = 'S8'><span>Dentro de este rango de frecuencias </span><span>f</span><span>c</span><span>1</span><span>f​</span><span> a </span><span>f</span><span>c</span><span>2​</span><span>, el filtro tiene una ganancia baja o atenuación significativa.</span></li><li  class = 'S8'><span>Las señales fuera de este rango de frecuencias son pasadas sin atenuación significativa.</span></li></ul><div  class = 'S6'><span style=' font-weight: bold;'>Tipos de Filtros Notch:</span></div><ul  class = 'S7'><li  class = 'S8'><span style=' font-weight: bold;'>Filtros Pasivos:</span><span> Utilizan componentes pasivos como inductores y condensadores para construir circuitos LC.</span></li><li  class = 'S8'><span style=' font-weight: bold;'>Filtros Activos:</span><span> Utilizan amplificadores operacionales u otros dispositivos activos para mejorar la selectividad y ajustabilidad.</span></li><li  class = 'S8'><span style=' font-weight: bold;'>Filtros Digitales:</span><span> Implementados en sistemas digitales mediante algoritmos de procesamiento de señales.</span></li></ul><div  class = 'S6'><span style=' font-weight: bold;'>Características:</span></div><ul  class = 'S7'><li  class = 'S8'><span style=' font-weight: bold;'>Ancho de Banda (BW):</span><span> Es la diferencia entre </span><span>f</span><span>c</span><span>2 y </span><span>f</span><span>c</span><span>1, que define la banda de frecuencia alrededor de </span><span>f</span><span>0</span><span>f donde el filtro notch es efectivo.</span></li><li  class = 'S8'><span style=' font-weight: bold;'>Atenuación:</span><span> Es la reducción en la amplitud de las señales que se produce dentro de la banda de rechazo </span><span>f</span><span>c</span><span>11</span><span>​</span><span> a </span><span>f</span><span>c</span><span>2​</span><span>.</span></li><li  class = 'S8'><span style=' font-weight: bold;'>Frecuencia Central (</span><span>f</span><span>0</span><span>f</span><span style=' font-weight: bold;'>):</span><span> Es la frecuencia alrededor de la cual se produce la máxima atenuación.</span></li></ul><div  class = 'S6'><span style=' font-weight: bold;'></span></div><h1  class = 'S9' id = 'T_2067ED6C' ><span>Objetivos</span></h1><ul  class = 'S7'><li  class = 'S8'><span>Conocer los conceptos de respuesta en frecuencia</span></li><li  class = 'S8'><span>Conocer los conceptos de filtros</span></li><li  class = 'S8'><span>Realizar graficas de Bode (manual y con MATLAB)</span></li><li  class = 'S8'><span>Realizar simulaciones numéricas de sistemas con MATLAB</span></li></ul><h1  class = 'S10' id = 'T_8DB43F80' ><span>Entregables</span></h1><h2  class = 'S4' id = 'H_3386E4A7' ><a href = "https://overclockingg.github.io/PracticasAsys/"><span style=' font-weight: bold;'>PROBLEMA 1</span></a></h2><h2  class = 'S4' id = 'H_82096872' ><a href = "https://overclockingg.github.io/PracticasAsys/"><span style=' font-weight: bold;'>PROBLEMA 2</span></a></h2><h2  class = 'S4' id = 'H_3FB1B164' ><a href = "https://overclockingg.github.io/PracticasAsys/"><span style=' font-weight: bold;'>PROBLEMA 3</span></a></h2><h2  class = 'S4' id = 'H_0CC3B326' ><a href = "https://overclockingg.github.io/PracticasAsys/"><span style=' font-weight: bold;'>PROBLEMA 4</span></a></h2><h2  class = 'S4' id = 'H_59C0EB50' ><a href = "https://overclockingg.github.io/PracticasAsys/"><span style=' font-weight: bold;'>PROBLEMA 5</span></a></h2><h2  class = 'S4' id = 'H_BA4D4F21' ><a href = "https://overclockingg.github.io/PracticasAsys/"><span style=' font-weight: bold;'>PROBLEMA 6</span></a></h2><h2  class = 'S4' id = 'H_AD66D737' ><a href = "https://overclockingg.github.io/PracticasAsys/"><span style=' font-weight: bold;'>PROBLEMA 7</span></a></h2>
+<br>
+<!-- 
+##### SOURCE BEGIN #####
+%% *P10: Respuesta en frecuencia, simulación en MATLAB*
+%% Dependence of Frequency Response on Poles and Zeros of H(s)
+% 
+% 
+% El tema de la Dependencia de la Respuesta en Frecuencia en los Polos y Ceros 
+% de H(s)H(s)H(s) es fundamental en el análisis de sistemas lineales en el dominio 
+% de la frecuencia. Aquí se explora cómo la ubicación de los polos y ceros de 
+% una función de transferencia H(s)H(s)H(s) afecta directamente la forma y las 
+% características de su respuesta en frecuencia.
+% 
+% 
+% 
+% *Polos y Ceros*
+% 
+% Los polos y ceros de una función de transferencia son puntos en el plano complejo 
+% que determinan su comportamiento dinámico. Los ceros son las raíces del numerador 
+% de H(s),  mientras que los polos son las raíces del denominador.
+% 
+% *Respuesta en Frecuencia*
+% 
+% La respuesta en frecuencia de H(s) describe cómo el sistema responde a diferentes 
+% frecuencias de entrada. Se analiza utilizando la transformada de Laplace y evaluando 
+% H(jω), donde ω es la frecuencia angular.
+% 
+% *Frecuencia Angular*
+% 
+% La frecuencia angular ω está relacionada con la frecuencia f por ω=2πf. La 
+% respuesta en frecuencia proporciona información sobre cómo el sistema atenúa 
+% o amplifica señales de diferentes frecuencias.
+% 
+% *Impacto de los Polos*
+% 
+% Los polos de H(s) determinan las frecuencias donde la amplitud y la fase de 
+% la respuesta en frecuencia pueden cambiar significativamente. 
+% 
+% *Impacto de los Ceros*
+% 
+% Los ceros de H(s), ubicados en s=−σ+jω0​, influyen en cómo H(s) atenúa o amplifica 
+% ciertas frecuencias. Pueden anular las componentes de frecuencia correspondientes.
+% 
+% *Diagrama de Bode*
+% 
+% El diagrama de Bode es una herramienta gráfica para visualizar la respuesta 
+% en frecuencia de un sistema, mostrando cómo varía la magnitud y la fase de H(jω) 
+% con respecto a ω.
+% 
+% *Estabilidad y Resonancia*
+% 
+% La ubicación de los polos en el plano complejo no solo afecta la respuesta 
+% en frecuencia, sino también la estabilidad del sistema y la posibilidad de fenómenos 
+% de resonancia.
+% 
+% *Diseño de Sistemas*
+% 
+% El conocimiento de cómo los polos y ceros afectan la respuesta en frecuencia 
+% es crucial para el diseño de sistemas que cumplan con requisitos específicos 
+% de rendimiento en el dominio de la frecuencia.
+% 
+% En resumen, la Dependencia de la Respuesta en Frecuencia en los Polos y Ceros 
+% de H(s)H(s)H(s) es esencial para comprender y diseñar sistemas lineales, ya 
+% que permite prever y ajustar cómo el sistema reaccionará a diferentes frecuencias 
+% de entrada según la disposición de sus componentes fundamentales en el dominio 
+% de Laplace.
+%% Lowpass Filters 
+% Un filtro paso bajo (Lowpass Filter en inglés) es un dispositivo o circuito 
+% diseñado para permitir el paso de señales con frecuencias bajas y atenuar o 
+% bloquear las señales con frecuencias altas. Este tipo de filtro es fundamental 
+% en el procesamiento de señales y en numerosas aplicaciones de ingeniería y telecomunicaciones. 
+% Aquí se detalla exhaustivamente su funcionamiento y aplicaciones:
+% 
+% *Funcionamiento:*
+%% 
+% * Un filtro paso bajo se caracteriza por tener una frecuencia de corte, fcf_cfc​, 
+% que separa la región donde las frecuencias son atenuadas de aquellas que son 
+% pasadas sin atenuación significativa.
+% * Normalmente, se implementa mediante componentes electrónicos como resistencias, 
+% condensadores, inductores o dispositivos activos como amplificadores operacionales.
+% * En el dominio de la frecuencia, un filtro paso bajo ideal tendría una respuesta 
+% de ganancia unitaria para frecuencias por debajo de fcf_cfc​ y una ganancia 
+% cero para frecuencias por encima de fcf_cfc​.
+%% 
+% *Tipos de Filtros Paso Bajo:*
+%% 
+% * *Filtros Pasivos:* Utilizan solo componentes pasivos como resistencias, 
+% condensadores e inductores.
+% * *Filtros Activos:* Emplean componentes activos como amplificadores operacionales 
+% para lograr una mayor selectividad y control de la respuesta en frecuencia.
+% * *Filtros Digitales:* Implementados en sistemas digitales mediante algoritmos 
+% de procesamiento de señales, como los filtros FIR y IIR.
+%% 
+% *Características:*
+%% 
+% * *Frecuencia de Corte (*fcf_c*fc​):* Es la frecuencia a partir de la cual 
+% el filtro comienza a atenuar las señales.
+% * *Ancho de Banda:* La diferencia entre la frecuencia de corte y la frecuencia 
+% de corte inferior (en caso de un filtro paso bajo de tipo ideal).
+% * *Atenuación:* Es la reducción en la amplitud de las señales que se produce 
+% a medida que aumenta la frecuencia y se acerca a la frecuencia de corte.
+%% Bandpass Filters
+% 
+% 
+% Un filtro pasa banda (Bandpass Filter en inglés) es un dispositivo o circuito 
+% diseñado para permitir el paso de señales dentro de un rango específico de frecuencias 
+% y atenuar o bloquear las señales fuera de ese rango. Este tipo de filtro es 
+% fundamental en aplicaciones donde se necesita seleccionar y procesar señales 
+% dentro de una banda de frecuencia definida. A continuación, se detalla de manera 
+% detallada su funcionamiento, tipos, características, aplicaciones y consideraciones 
+% de diseño:
+% 
+% *Funcionamiento:*
+%% 
+% * Un filtro pasa banda tiene dos frecuencias de corte: una frecuencia de corte 
+% inferior ​ y una frecuencia de corte superior​.
+% * Dentro de este rango de frecuencias ​, el filtro tiene una ganancia significativa, 
+% permitiendo que las señales pasen con mínima atenuación.
+% * Las señales fuera de este rango de frecuencias son atenuadas considerablemente.
+%% 
+% *Tipos de Filtros Pasa Banda:*
+%% 
+% * *Filtros Pasivos:* Utilizan componentes pasivos como inductores y condensadores 
+% para construir circuitos LC.
+% * *Filtros Activos:* Utilizan amplificadores operacionales u otros dispositivos 
+% activos para mejorar la selectividad y ajustabilidad.
+% * *Filtros Digitales:* Implementados en sistemas digitales mediante algoritmos 
+% de procesamiento de señales.
+%% 
+% *Características:*
+%% 
+% * *Ancho de Banda (BW):* Es la diferencia entre  Fc2 y Fc1​, que define la 
+% banda de frecuencia donde el filtro pasa banda es efectivo.
+% * *Frecuencia Central (*f0f_0*f0​):* Es el punto medio entre Fc2 y Fc12​, 
+% donde la ganancia del filtro pasa banda alcanza su máximo.
+% * *Selectividad:* Indica cuán bien el filtro puede discriminar las frecuencias 
+% dentro de su banda de paso frente a las frecuencias fuera de esta banda.
+%% Notch (Bandstop) Filters
+% 
+% 
+% Un filtro notch, también conocido como filtro bandstop en inglés, es un dispositivo 
+% o circuito diseñado para atenuar o bloquear selectivamente una banda estrecha 
+% de frecuencias alrededor de una frecuencia central específica, mientras permite 
+% el paso de todas las demás frecuencias. Este tipo de filtro es utilizado principalmente 
+% para suprimir o eliminar frecuencias no deseadas en aplicaciones donde es crucial 
+% mantener el resto del espectro de frecuencias intacto. A continuación, se detalla 
+% de manera detallada su funcionamiento, tipos, características, aplicaciones 
+% y consideraciones de diseño:
+% 
+% *Funcionamiento:*
+%% 
+% * Un filtro notch tiene una frecuencia central f0f alrededor de la cual atenúa 
+% las señales. Esta frecuencia central es aquella que se desea suprimir o atenuar.
+% * Generalmente, el filtro notch se caracteriza por tener dos frecuencias de 
+% corte fc1 y fc2​, que definen la banda de frecuencias que serán atenuadas alrededor 
+% de f0f​.
+% * Dentro de este rango de frecuencias fc1f​ a fc2​, el filtro tiene una ganancia 
+% baja o atenuación significativa.
+% * Las señales fuera de este rango de frecuencias son pasadas sin atenuación 
+% significativa.
+%% 
+% *Tipos de Filtros Notch:*
+%% 
+% * *Filtros Pasivos:* Utilizan componentes pasivos como inductores y condensadores 
+% para construir circuitos LC.
+% * *Filtros Activos:* Utilizan amplificadores operacionales u otros dispositivos 
+% activos para mejorar la selectividad y ajustabilidad.
+% * *Filtros Digitales:* Implementados en sistemas digitales mediante algoritmos 
+% de procesamiento de señales.
+%% 
+% *Características:*
+%% 
+% * *Ancho de Banda (BW):* Es la diferencia entre fc2 y fc1, que define la banda 
+% de frecuencia alrededor de f0f donde el filtro notch es efectivo.
+% * *Atenuación:* Es la reducción en la amplitud de las señales que se produce 
+% dentro de la banda de rechazo fc11​ a fc2​.
+% * *Frecuencia Central (*f0f*):* Es la frecuencia alrededor de la cual se produce 
+% la máxima atenuación.
+%% 
+% 
+%% Objetivos
+%% 
+% * Conocer los conceptos de respuesta en frecuencia
+% * Conocer los conceptos de filtros
+% * Realizar graficas de Bode (manual y con MATLAB)
+% * Realizar simulaciones numéricas de sistemas con MATLAB
+%% Entregables
+%% <https://overclockingg.github.io/PracticasAsys/ *PROBLEMA 1*>
+%% <https://overclockingg.github.io/PracticasAsys/ *PROBLEMA 2*>
+%% <https://overclockingg.github.io/PracticasAsys/ *PROBLEMA 3*>
+%% <https://overclockingg.github.io/PracticasAsys/ *PROBLEMA 4*>
+%% <https://overclockingg.github.io/PracticasAsys/ *PROBLEMA 5*>
+%% <https://overclockingg.github.io/PracticasAsys/ *PROBLEMA 6*>
+%% <https://overclockingg.github.io/PracticasAsys/ *PROBLEMA 7*>
+##### SOURCE END #####
+-->
+</div></body></html>
