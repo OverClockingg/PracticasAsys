@@ -1,0 +1,358 @@
+.u-block-62a2-2 {
+  position: absolute;
+  bottom: 10px;
+  margin-bottom: 0;
+}
+
+.u-block-62a2-5 {
+  position: absolute;
+  left: 0;
+  width: 45px;
+  height: 45px;
+  right: auto;
+}
+
+.u-block-62a2-6 {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: auto;
+  right: 0;
+}
+
+ .u-section-1-1 {
+  background-image: none;
+}
+
+.u-section-1-1 .u-sheet-1 {
+  min-height: 1028px;
+}
+
+.u-section-1-1 .u-layout-wrap-1 {
+  pointer-events: auto;
+  margin: 95px 0 0;
+}
+
+.u-section-1-1 .u-image-1 {
+  min-height: 797px;
+  pointer-events: auto;
+  background-image: url("https://overclockingg.github.io/PracticasAsys/p11-1.jpg");
+  background-position: 50% 50%;
+}
+
+.u-section-1-1 .u-container-layout-1 {
+  padding: 30px 60px 79px;
+}
+
+.u-section-1-1 .u-layout-cell-2 {
+  min-height: 849px;
+  pointer-events: auto;
+}
+
+.u-section-1-1 .u-container-layout-2 {
+  padding: 30px 43px;
+}
+
+.u-section-1-1 .u-text-1 {
+  margin: 19px 29px 0;
+}
+
+.u-section-1-1 .u-text-2 {
+  width: 161px;
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin: 25px auto 0;
+}
+
+.u-section-1-1 .u-text-3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 19px 20px 0 0;
+}
+
+.u-section-1-1 .u-text-4 {
+  font-size: 1rem;
+  margin: 29px 33px 0;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1-1 .u-sheet-1 {
+    min-height: 629px;
+  }
+
+  .u-section-1-1 .u-layout-wrap-1 {
+    margin-right: initial;
+    margin-left: initial;
+  }
+
+  .u-section-1-1 .u-image-1 {
+    min-height: 657px;
+  }
+
+  .u-section-1-1 .u-layout-cell-2 {
+    min-height: 1000px;
+  }
+
+  .u-section-1-1 .u-text-1 {
+    text-transform: none;
+    font-size: 3.75rem;
+    font-weight: 700;
+    margin-top: -107px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .u-section-1-1 .u-text-2 {
+    margin-left: 51px;
+  }
+
+  .u-section-1-1 .u-text-3 {
+    width: 355px;
+    margin-top: 136px;
+    margin-right: 0;
+  }
+
+  .u-section-1-1 .u-text-4 {
+    margin-top: 17px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1-1 .u-sheet-1 {
+    min-height: 667px;
+  }
+
+  .u-section-1-1 .u-image-1 {
+    min-height: 503px;
+  }
+
+  .u-section-1-1 .u-container-layout-1 {
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .u-section-1-1 .u-layout-cell-2 {
+    min-height: 1127px;
+  }
+
+  .u-section-1-1 .u-container-layout-2 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .u-section-1-1 .u-text-1 {
+    font-size: 3rem;
+    margin-top: 19px;
+  }
+
+  .u-section-1-1 .u-text-3 {
+    width: 295px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1-1 .u-sheet-1 {
+    min-height: 994px;
+  }
+
+  .u-section-1-1 .u-image-1 {
+    min-height: 755px;
+  }
+
+  .u-section-1-1 .u-container-layout-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-1-1 .u-layout-cell-2 {
+    min-height: 850px;
+  }
+
+  .u-section-1-1 .u-container-layout-2 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1-1 .u-sheet-1 {
+    min-height: 179px;
+  }
+
+  .u-section-1-1 .u-image-1 {
+    min-height: 475px;
+  }
+
+  .u-section-1-1 .u-layout-cell-2 {
+    min-height: 1069px;
+  }
+
+  .u-section-1-1 .u-text-2 {
+    font-size: 1.5rem;
+  }
+}
+
+ .u-section-1-2 {
+  background-image: none;
+}
+
+.u-section-1-2 .u-sheet-1 {
+  min-height: 719px;
+}
+
+.u-section-1-2 .u-layout-wrap-1 {
+  pointer-events: auto;
+  margin: 51px 0 60px;
+}
+
+.u-section-1-2 .u-image-1 {
+  min-height: 600px;
+  pointer-events: auto;
+  background-image: url("https://overclockingg.github.io/PracticasAsys/p11-2.jpg");
+  background-position: 50% 50%;
+}
+
+.u-section-1-2 .u-container-layout-1 {
+  padding: 30px 60px;
+}
+
+.u-section-1-2 .u-layout-cell-2 {
+  min-height: 600px;
+  pointer-events: auto;
+}
+
+.u-section-1-2 .u-container-layout-2 {
+  padding: 30px 60px;
+}
+
+.u-section-1-2 .u-text-1 {
+  font-size: 3.75rem;
+  font-weight: 700;
+  text-transform: none;
+  margin: 27px 0 0;
+}
+
+.u-section-1-2 .u-btn-1 {
+  background-image: none;
+  border-style: solid;
+  text-transform: uppercase;
+  cursor: pointer !important;
+  user-select: none !important;
+  margin: 41px auto 0;
+  padding: 0;
+}
+
+.u-section-1-2 .u-btn-2 {
+  background-image: none;
+  border-style: solid;
+  text-transform: uppercase;
+  cursor: pointer !important;
+  user-select: none !important;
+  margin: 80px auto 0;
+  padding: 0;
+}
+
+.u-section-1-2 .u-btn-3 {
+  background-image: none;
+  border-style: solid;
+  text-transform: uppercase;
+  cursor: pointer !important;
+  user-select: none !important;
+  margin: 73px 170px 0;
+  padding: 0;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1-2 .u-sheet-1 {
+    min-height: 614px;
+  }
+
+  .u-section-1-2 .u-layout-wrap-1 {
+    margin-right: initial;
+    margin-left: initial;
+  }
+
+  .u-section-1-2 .u-image-1 {
+    min-height: 495px;
+  }
+
+  .u-section-1-2 .u-layout-cell-2 {
+    min-height: 495px;
+  }
+
+  .u-section-1-2 .u-btn-3 {
+    margin-right: 120px;
+    margin-left: 120px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1-2 .u-sheet-1 {
+    min-height: 667px;
+  }
+
+  .u-section-1-2 .u-image-1 {
+    min-height: 379px;
+  }
+
+  .u-section-1-2 .u-container-layout-1 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .u-section-1-2 .u-layout-cell-2 {
+    min-height: 100px;
+  }
+
+  .u-section-1-2 .u-container-layout-2 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .u-section-1-2 .u-btn-3 {
+    margin-right: 95px;
+    margin-left: 95px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1-2 .u-sheet-1 {
+    min-height: 994px;
+  }
+
+  .u-section-1-2 .u-image-1 {
+    min-height: 569px;
+  }
+
+  .u-section-1-2 .u-container-layout-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-1-2 .u-container-layout-2 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .u-section-1-2 .u-text-1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1-2 .u-sheet-1 {
+    min-height: 179px;
+  }
+
+  .u-section-1-2 .u-image-1 {
+    min-height: 358px;
+  }
+
+  .u-section-1-2 .u-btn-3 {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
